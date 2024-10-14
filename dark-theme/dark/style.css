@@ -1,0 +1,168 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body.light-mode {
+    background-color: white;
+    color: #1e1e1e;
+    transition: 0.4s;
+}
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: white;
+    transition: 0.4s;
+}
+::-webkit-scrollbar{
+    display: none;
+    width: 0;
+}
+:root{
+    --dark: #1e1e1e;
+}
+.main{
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+.card1{
+    width: 49vw;
+    height: 400px;
+    max-width: 400px;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10%;
+    color: white;
+    text-align: center;
+}
+.card2{
+    width: 49vw;
+    height: 400px;
+    max-width: 400px;
+    background-color: #1e1e1e;
+    padding: 20px;
+    flex-direction:column;
+    border-radius: 10%;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+}
+.card2 .input1 .input2, label{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+}
+::-webkit-input-placeholder{
+    text-align: center;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+.card2 input{
+    width: 300px;
+    border-radius: 5px;
+    padding: 5px;
+}
+.card1 img{
+    background-color: white;
+    padding: 25px;
+    width: 250px;
+    border-radius: 20px;
+    margin-top: 15px;
+}
+.card2 h1{
+    text-decoration: underline;
+    padding: 0px 20px;
+}
+.btn-confirm{
+    padding: 10px;
+    margin: 10px 0px;
+    width: 300px;
+    border:none;
+    background-color: steelblue;
+    color:white;
+    font-weight: bolder;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 20px;
+}
+.input1 .input2, input[type='text'], input[type='password'] {
+    border: none;
+    outline: none;
+}
+.switch{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 10px;
+}
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.switch label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 50px;
+    height: 25px;
+    background-color: #1e1e1e;
+    border-radius:20px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.switch label::before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    left: 3px;
+    top: 3px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.switch input:checked + label{
+    background-color: white;
+}
+.switch input:checked + label::before{
+    transform: translatex(25px);
+    background-color: #1e1e1e;
+}
+.dark{
+    text-align: right;
+    position: absolute;
+    display: inline-block;
+    right: 65px;
+    top: 4px;
+}
+@media (max-width: 700px) {
+    .main{
+        position: absolute;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .card1, .card2{
+        width: 300px;
+        height: 300px;
+        padding: 15px;
+    }
+    .main .car1 .card2, img{
+        width: 70px;
+        height: 150px;
+        object-fit: cover;
+    }
+    .card2 input{
+        width: 280px;
+    }
+    .btn-confirm{
+        width: 290px;
+    }
+}
